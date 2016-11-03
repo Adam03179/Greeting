@@ -69,17 +69,4 @@ public class GreetingGeneratorTest {
 
     }
 
-    @Test
-    public void ruLanguageTest() throws ParseException {
-        Date night = dateFormat.parse("23:44:85");
-        locale = new Locale("ru");
-        bundle = ResourceBundle.getBundle("greetingBundle", locale);
-        generator = new GreetingGenerator();
-        generator.greetingsChoice(bundle, night);
-        assertEquals("Доброй ночи, Мир!", generator.greetingsChoice(bundle, night));
-
-
-
-    }
-
 }
