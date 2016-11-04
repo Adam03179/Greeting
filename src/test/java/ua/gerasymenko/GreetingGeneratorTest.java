@@ -20,7 +20,7 @@ public class GreetingGeneratorTest {
 
     @Test
     public void morningChoiceTest() throws ParseException {
-        Date morning = dateFormat.parse("07:30:55");
+        Date morning = dateFormat.parse("06:00:00");
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("greetingBundle", locale);
         generator = new GreetingGenerator();
@@ -30,7 +30,7 @@ public class GreetingGeneratorTest {
 
     @Test
     public void dayChoiceTest() throws ParseException {
-        Date day = dateFormat.parse("11:55:55");
+        Date day = dateFormat.parse("09:00:00");
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("greetingBundle", locale);
         generator = new GreetingGenerator();
@@ -40,7 +40,7 @@ public class GreetingGeneratorTest {
 
     @Test
     public void eveningChoiceTest() throws ParseException {
-        Date evening = dateFormat.parse("22:59:00");
+        Date evening = dateFormat.parse("19:00:00");
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("greetingBundle", locale);
         generator = new GreetingGenerator();
@@ -50,7 +50,7 @@ public class GreetingGeneratorTest {
 
     @Test
     public void nightChoiceTest() throws ParseException {
-        Date night = dateFormat.parse("23:44:85");
+        Date night = dateFormat.parse("23:00:00");
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("greetingBundle", locale);
         generator = new GreetingGenerator();
