@@ -21,6 +21,7 @@ public class GreetingExecutor {
         try {
             defaultBundle = ResourceBundle.getBundle("greetingBundle", locale);
         } catch (MissingResourceException e) {
+            LOG.warn("missing resourceBundle");
             defaultBundle = ResourceBundle.getBundle("greetingBundle_en_US");
         }
 
