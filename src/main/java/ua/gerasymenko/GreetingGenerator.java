@@ -35,10 +35,10 @@ public class GreetingGenerator {
         if (current.after(morning) && current.before(day)) {
             LOG.info("Morning greeting was generated");
             return bundle.getString("MORNING");
-        } else if (current.after(day) && current.before(evening)) {
+        } else if (current.before(evening)) {
             LOG.info("Day greeting was generated");
             return bundle.getString("DAY");
-        } else if (current.after(evening) && current.before(night)) {
+        } else if (current.before(night)) {
             LOG.info("Evening greeting was generated");
             return bundle.getString("EVENING");
         } else {

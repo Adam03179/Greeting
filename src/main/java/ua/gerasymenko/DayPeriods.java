@@ -1,7 +1,7 @@
 package ua.gerasymenko;
 
 public enum DayPeriods {
-    MORNING("06:00:00"),
+    MORNING("05:59:59"),
 
     DAY("09:00:00"),
 
