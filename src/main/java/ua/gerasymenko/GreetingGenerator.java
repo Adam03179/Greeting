@@ -7,6 +7,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+
+
+
+
+
 public class GreetingGenerator {
 
     private static final Logger LOG = Logger.getLogger(GreetingGenerator.class);
@@ -35,10 +40,10 @@ public class GreetingGenerator {
         if (current.after(morning) && current.before(day)) {
             LOG.info("Morning greeting was generated");
             return bundle.getString("MORNING");
-        } else if (current.before(evening)) {
+        } else if (current.after(morning) && current.before(evening)) {
             LOG.info("Day greeting was generated");
             return bundle.getString("DAY");
-        } else if (current.before(night)) {
+        } else if (current.after(morning) && current.before(night)) {
             LOG.info("Evening greeting was generated");
             return bundle.getString("EVENING");
         } else {

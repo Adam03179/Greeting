@@ -31,3 +31,9 @@
 2016-11-04 15:28:20 INFO  GreetingGenerator:39 - Day greeting was generated
 2016-11-04 15:28:20 INFO  GreetingGenerator:45 - Night greeting was generated
 2016-11-04 15:45:15 INFO  GreetingGenerator:39 - Day greeting was generated
+2016-11-06 20:33:35 INFO  GreetingGenerator:44 - Day greeting was generated
+2016-11-06 20:45:12 INFO  GreetingGenerator:44 - Day greeting was generated
+2016-11-06 20:47:26 INFO  GreetingGenerator:50 - Night greeting was generated
+2016-11-06 20:47:41 INFO  GreetingGenerator:47 - Evening greeting was generated
+2016-11-06 20:48:02 INFO  GreetingGenerator:50 - Night greeting was generated
+2016-11-06 20:48:21 INFO  GreetingGenerator:50 - Night greeting was generated

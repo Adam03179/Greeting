@@ -50,7 +50,7 @@ public class GreetingGeneratorTest {
 
     @Test
     public void nightChoiceTest() throws ParseException {
-        Date night = dateFormat.parse("23:00:00");
+        Date night = dateFormat.parse("05:59:59");
         locale = Locale.US;
         bundle = ResourceBundle.getBundle("greetingBundle", locale);
         generator = new GreetingGenerator();
