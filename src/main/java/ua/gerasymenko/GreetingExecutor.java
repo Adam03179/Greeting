@@ -8,6 +8,8 @@ import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
+import static ua.gerasymenko.GreetingGenerator.greetingsChoice;
+
 public class GreetingExecutor {
 
     private static final Logger LOG = Logger.getLogger(GreetingExecutor.class);
@@ -27,12 +29,8 @@ public class GreetingExecutor {
 
         Date currentDate = new Date();
 
-
         try {
-
-            GreetingGenerator greetingGenerator = new GreetingGenerator();
-            System.out.println(greetingGenerator.greetingsChoice(defaultBundle, currentDate));
-
+            System.out.println(greetingsChoice(defaultBundle, currentDate));
         } catch (ParseException e) {
             LOG.error("date greeting error", e);
         }

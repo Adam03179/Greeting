@@ -8,34 +8,19 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-
-
-
-
-public class GreetingGenerator {
+class GreetingGenerator {
 
     private static final Logger LOG = Logger.getLogger(GreetingGenerator.class);
-
-    private Date morning;
-    private Date day;
-    private Date evening;
-    private Date night;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 
-    public GreetingGenerator() throws ParseException {
-
-
-        this.morning = dateFormat.parse(DayPeriods.MORNING.toString());
-        this.day = dateFormat.parse(DayPeriods.DAY.toString());
-        this.evening = dateFormat.parse(DayPeriods.EVENING.toString());
-        this.night = dateFormat.parse(DayPeriods.NIGHT.toString());
-    }
-
-
-    public String greetingsChoice(ResourceBundle bundle, Date currentDate) throws ParseException {
+    static String greetingsChoice(ResourceBundle bundle, Date currentDate) throws ParseException {
 
         Date current = dateFormat.parse(dateFormat.format(currentDate));
+        Date morning = dateFormat.parse("05:59:59");
+        Date day = dateFormat.parse("09:00:00");
+        Date evening = dateFormat.parse("19:00:00");
+        Date night = dateFormat.parse("23:00:00");
 
         if (current.after(morning) && current.before(day)) {
             LOG.info("Morning greeting was generated");
